@@ -1,0 +1,167 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+body{
+    background: #441a7a url("../img/bg.png") no-repeat;
+    background-size: 100% auto;
+    position: relative;
+    font-size:20px;
+    font-family:"Microsoft YaHei";
+}
+marquee {
+    color: #fff;
+    font-size: 12px;
+    line-height: 22px;
+    background: rgba(255,255,255,0.4);
+    position: absolute;
+    margin-top: -99px;
+    left: 10%;
+    top: 0;
+    width: 80%;
+    border-radius: 22px;
+}
+marquee span {
+    padding: 0 .65rem;
+}
+.ggl{
+    position: relative;
+    width: 91.2%;
+    padding: 26% 0;
+    margin: 0 auto;
+    background: url(../img/ggl.png) no-repeat center center;
+    background-size: cover;
+    top:16.6rem;
+}
+.canvas{
+    position:absolute;
+    top:2px;
+    left:3.85%;
+    width:92.3%;
+    padding: 3.85% 0;
+    height: 84%;
+    line-height:82px;
+    text-align:center;
+    z-index: 2;
+
+}
+.info{
+    position: absolute;
+    left: 3.85%;
+    top:0;
+    width: 92.3%;
+    padding: 5% 0;
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+.info span{
+    display: block;
+    font-size: 18px;
+}
+#prompt{
+    margin: 20px 0;
+}
+.btn{
+    position: relative;
+    width: 60%;
+    height: 35px;
+    line-height: 35px;
+    background: #ff504b;
+    color: #fff;
+    border-radius: 35px;
+    margin: 0 auto;
+    z-index: 1;
+}
+.guize{
+    display: block;
+    width: 85.6%;
+    height: auto;
+    margin: 5% auto 10% auto;
+    border-radius: 5px;
+}
+#ok, #no{display: none;}
+.pop{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+}
+.pop img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 15% auto;
+}
+
+
+
+/*抽奖说明*/
+.explain {
+    background: rgba(255,255,255,0.3);
+    color: #fff;
+    padding: .5rem;
+    margin: 18rem .75rem 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 21px;
+}
+.explain>span {
+    background: #ffcc21;
+    padding: 0 .55rem;
+    border-radius: 21px;
+}
+.explain p:first-of-type {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+/*再来一次*/
+.alert {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    z-index: 4;
+}
+.alert>div {
+    width: 88%;
+    padding: 43.8% 0;
+    position: fixed;
+    background: url(../img/alert-bg.png) no-repeat left bottom;
+    background-size: 100% auto;
+    left: 6%;
+    top: 50%;
+    margin-top: -165px;
+}
+.recharge-btn {
+    width: 72%;
+    height: 0;
+    padding: 5.5% 0;
+    background: url(../img/btn-bg.png) no-repeat;
+    background-size: 100% auto;
+    border: none;
+    position: absolute;
+    left: 14%;
+    bottom: 16%;
+}
+.alert p {
+    position: absolute;
+    text-align: center;
+    bottom: 8%;
+    color: #827979;
+    font-size: 14px;
+    width: 100%;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>砸金蛋</title>
+    <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
+    <link href="css/style.css"  rel="stylesheet">
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <marquee onmouseout="this.start()" onmouseover="this.stop()">
+            <span>欣欣用户获得16话币</span>
+            <span>向荣用户获得16话币</span>
+        </marquee>
+        <!--金蛋-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" >
+                    <img src="img/slide.png" width="100%">
+                </div>
+                <div class="swiper-slide" ><img src="img/slide.png" width="100%"></div>
+                <div class="swiper-slide" ><img src="img/slide.png" width="100%"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--活动说明-->
+    <section class="explain">
+        <span>中奖纪录</span>
+        <p>活动说明</p>
+        <p>1.XXXXXXXXXXXXXXX</p>
+        <p>2XXXXXXXXXXXXXXX</p>
+        <p>3.XXXXXXXXXXXXXXX</p>
+        <p>4.XXXXXXXXXXXXXXX</p>
+    </section>
+    <!--抽奖失败-->
+    <div class="fail" ></div>
+    <!--抽中-->
+    <div class="success">
+        <div class="success-div"></div>
+        <input type="button" class="btn">
+    </div>
+    <!--余额不足-->
+    <div class="alert" id="alert">
+        <div class="recharge">
+            <input type="button" class="alert-btn">
+            <p><a href="#">向好友索要机会</a></p>
+        </div>
+    </div>
+    <!--领取奖品-->
+    <div class="alert " >
+        <div class="receive">
+            <div class="title"></div>
+            <div class="con-form">
+                <form>
+                    <div>
+                        <input type="text" placeholder="请输入手机号码">
+                    </div>
+                    <div class="code">
+                        <input type="text" placeholder="请输入验证码">
+                        <input type="button" value="发送验证码" class="code-btn">
+                    </div>
+                    <span class="receive-btn">立即领奖</span>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--领奖成功-->
+    <div class="alert" id="alert-success">
+        <div class="alert-success">
+            <div class="title"></div>
+            <div class="con-form">
+                <span class="receive-btn">下载助商通</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(function(){
+        var swiper = new Swiper('.swiper-container', {
+            //pagination: '.swiper-pagination',
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            loop:true,
+            coverflow: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows : true
+            }
+        });
+        //随机数
+        function getRandomNum(lbound, ubound) {
+            return (Math.floor(Math.random() * (ubound - lbound)) + lbound);
+        }
+        var t=1;
+        $(".swiper-slide").on("click",function(){
+            var r = getRandomNum(1,100);
+            if(t>1){
+                $("#alert").show();
+            }else {
+                $(this).append('<img src="img/cuizi.png" class="imgChuiZi">');
+                setTimeout(function(){
+                    $(".imgChuiZi").remove();
+                    if(r >= 50){//获奖的概率,更换 .success-div 背景图
+                        $(".fail").show();
+                    }else {
+                        $(".success").show();
+                        //$(".success-div").css("background-image",图片路径);
+                    }
+                },3500);
+                return t= t+1;
+            }
+        })
+    });
+
+
+
+    $(document).on("click",".btn",function(){
+        $(".success").hide();
+        $("#alert-success").show();
+    }).on("click",".fail",function(){
+        $(".fail").hide();
+    }).on("click",".alert-btn",function(){
+        $("#alert").hide();
+    })
+</script>
+</html>

@@ -1,0 +1,166 @@
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;border:0;}
+body{
+    font-size:20px;
+    font-family:"Microsoft YaHei";
+    background:#f87803 url(../images/body_bg2.png) no-repeat;
+    background-size:100% auto;
+}
+ul,ol{list-style-type:none;}
+select,input,img,select{vertical-align:middle;}
+input{ font-size:12px;}
+a{ text-decoration:none; color:#000;}
+a:hover{ text-decoration:none;}
+.clear{clear:both;}
+
+/* 大转盘样式 */
+.banner{
+    display:block;
+    width:75.7333%;
+    margin: 60% auto 20px auto;
+}
+.banner .turnplate{
+    background-image:url(../images/cj_bg.png);
+    background-size:100% 100%;
+    position:relative;
+}
+.banner .turnplate canvas.item{width:100%;}
+.banner .turnplate img.pointer{
+    position: absolute;
+    width: 22%;
+    height: 28%;
+    left: 39%;
+    top: 35%;
+}
+
+/*滚动文字*/
+marquee{
+    color: #fff;
+    font-size: 12px;
+    line-height: 22px;
+    background: rgba(255,255,255,0.4);
+    position: absolute;
+    margin-top: -30px;
+    left: 10%;
+    width: 80%;
+    border-radius: 22px;
+}
+marquee span{
+    padding: 0 .65rem;
+}
+
+/*说明*/
+.explain{
+    background: rgba(255,255,255,0.3);
+    color: #fff;
+    padding: .5rem;
+    margin: 20px .75rem;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 21px;
+}
+.explain>span{
+    background: #ffcc21;
+    padding: 0 .55rem;
+    border-radius: 21px;
+}
+.explain p:first-of-type{
+    font-size: 16px;
+    line-height: 26px;
+}
+/*抽奖失败*/
+.fail{
+    background: rgba(0,0,0,0.3) url("../images/fail-bg.png") no-repeat left top;
+    background-size: 100% auto;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+}
+/*余额不足*/
+.alert{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.3);
+    display: none;
+}
+.alert>div{
+    width: 88%;
+    padding: 43.8% 0;
+    position: fixed;
+    background: url("../images/alert-bg.png") no-repeat left bottom;
+    background-size: 100% auto;
+    left: 6%;
+    top:50%;
+    margin-top: -165px;
+}
+.btn{
+    width: 72%;
+    height: 0;
+    padding: 5.5% 0;
+   background: url("../images/btn-bg.png") no-repeat;
+    background-size: 100% auto;
+    border: none;
+    position: absolute;
+    left: 14%;
+    bottom: 16%;
+}
+.alert p{
+    position: absolute;
+    text-align: center;
+    bottom: 8%;
+    color: #827979;
+    font-size: 14px;
+    width: 100%;
+}
+
+/*抽中*/
+.success{
+    background: rgba(0,0,0,0.3) url("../images/success-bg.png") no-repeat left top;
+    background-size: 100% auto;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.success-div{
+    position: absolute;
+    left: 28.25%;
+    top: 43%;
+    width: 43.5%;
+    padding: 28.5% 0;
+    background: url("../images/hongbao.png") no-repeat;
+    background-size: 100% auto;
+    text-align: center;
+}
+.success-div p:first-of-type{
+    position: absolute;
+    color: #fff;
+    font-size: 19px;
+    width: 100%;
+    bottom: 33%;
+}
+.success-div p:nth-of-type(2){
+    position: absolute;
+    color: #fbda30;
+    font-size: 22px;
+    width: 100%;
+    bottom: 17%;
+}
+.success-btn{
+    position: absolute;
+    width: 93%;
+    left: 3.5%;
+    bottom: 10%;
+    background: url("../images/success-btn.png") no-repeat;
+    background-size: 100% auto;
+    height: 0;padding: 6.5% 0;
+    outline: none;
+    border: none;
+}

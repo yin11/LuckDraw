@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:#ffb34a url(../img/bg.png) no-repeat;
+    background-size: 100% auto;
+    font-size: 20px;
+    font-family:"Microsoft YaHei";
+}
+a{ text-decoration:none;color: #999; }
+marquee {
+    color: #fff;
+    font-size: 12px;
+    line-height: 22px;
+    height: 22px;
+    background: rgba(255,255,255,0.4);
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    border-radius: 22px;
+}
+marquee span {
+    padding: 0 .65rem;
+}
+.explain {
+    background: rgba(255,255,255,0.3);
+    color: #fff;
+    padding: .5rem;
+    margin: 20px .75rem;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 21px;
+}
+.explain>span {
+    background: #ffcc21;
+    padding: 0 .55rem;
+    border-radius: 21px;
+}
+.explain p:first-of-type {
+    font-size: 16px;
+    line-height: 26px;
+}
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+    height: 200px;
+    margin-top: 10rem;
+}
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 150px;
+    position: relative;
+}
+.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right{
+    background-image: none;
+}
+.imgChuiZi{
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 65%;
+    z-index: 10002;
+    -moz-transform-origin: bottom right;
+    -webkit-transform-origin: bottom right;
+    transform-origin: bottom 100%;
+    -moz-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+    -moz-animation: chuizi 1.5s ease 3;
+    -webkit-animation: chuizi 1.5s ease 3;
+    animation: chuizi 1.5s ease 3;
+}
+@keyframes chuizi {
+    0% {
+        -moz-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+    30% {
+        -moz-transform: rotate(-25deg);
+        -ms-transform: rotate(-25deg);
+        -webkit-transform: rotate(-25deg);
+        transform: rotate(-25deg);
+    }
+    100% {
+        -moz-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+}
+@-webkit-keyframes chuizi {
+    0% {
+        -moz-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+    30% {
+        -moz-transform: rotate(-25deg);
+        -ms-transform: rotate(-25deg);
+        -webkit-transform: rotate(-25deg);
+        transform: rotate(-25deg);
+    }
+    100% {
+        -moz-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+}
+@-moz-keyframes chuizi {
+    0% {
+        -moz-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+    30% {
+        -moz-transform: rotate(-25deg);
+        -ms-transform: rotate(-25deg);
+        -webkit-transform: rotate(-25deg);
+        transform: rotate(-25deg);
+    }
+    100% {
+        -moz-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+}
+.fail {
+    background: rgba(0,0,0,0.3) url(../img/fail-bg.png) no-repeat left top;
+    background-size: 100% auto;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 99;
+}
+.success{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3) url("../img/success-bg.png") no-repeat left top;
+    background-size: 100% auto;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    display: none;
+}
+.success-div{
+    width: 80%;
+    padding: 30% 0;
+    background: url("../img/success.png") no-repeat center;
+    background-size: auto 100%;
+    position: absolute;
+    left: 10%;
+    top: 40%;
+}
+.btn{
+    background: url("../img/success-btn.png") no-repeat;
+    background-size: 100% auto;
+    width: 93%;
+    height: 0;
+    padding: 6.5% 0;
+    border: none;
+    position: absolute;
+    left: 3.5%;
+    bottom: 8%;
+}
+
+/*余额不足*/
+.alert{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    z-index: 99;
+}
+.recharge{
+    width: 88%;
+    padding: 43.8% 0;
+    position: fixed;
+    background: url("../img/alert-bg.png") no-repeat left bottom;
+    background-size: 100% auto;
+    left: 6%;
+    top:50%;
+    margin-top: -165px;
+}
+.alert-btn{
+    width: 72%;
+    height: 0;
+    padding: 5.5% 0;
+    background: url("../img/btn-bg.png") no-repeat;
+    background-size: 100% auto;
+    border: none;
+    position: absolute;
+    left: 14%;
+    bottom: 16%;
+}
+.alert p{
+    position: absolute;
+    text-align: center;
+    bottom: 8%;
+    color: #827979;
+    font-size: 14px;
+    width: 100%;
+}
+
+/*领取奖品*/
+.alert .receive{
+    position: absolute;
+    left: 6%;
+    top: 50%;
+    width: 88%;
+    background: transparent;
+    border: 6px solid rgba(255,255,0,0.3);
+    margin-left: -6px;
+    padding: 0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.receive .title{
+    background: url("../img/title-bg.png") no-repeat;
+    padding: 9.968% 0;
+    background-size: 100% auto;
+}
+.con-form{
+    background: #fff;
+    padding: 24px .8rem;
+}
+.con-form input[type="text"]{
+    padding: 0 .7rem;
+    line-height: 35px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #e3e3e3;
+    border-radius: 3px;
+    margin-bottom: 7px;
+}
+.code{
+    padding-right: 5rem;
+    position: relative;
+}
+.code-btn{
+    line-height: 37px;
+    background: #ffde00;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    border: none;
+    right: 0;
+    top: 0;
+    width: 4.5rem;
+    padding: 0;
+    border-radius: 3px;
+    font-size: 12px;
+}
+.receive-btn{
+    background: #ff504b;
+    color: #ffde00;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 35px;
+    width: 85%;
+    border:none;
+    margin: 0 auto;
+    display: block;
+}
+.alert-success{
+    width: 88%;
+    position: absolute;
+    left: 6%;
+    border: 6px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    overflow: hidden;
+    top:25%;
+}
+.alert-success .title{
+    background: url("../img/success-title.png") no-repeat;
+    background-size: 100% auto;
+    padding: 27.8% 0;
+}
